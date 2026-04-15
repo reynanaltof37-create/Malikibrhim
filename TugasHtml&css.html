@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+    <title>Valorant Zone</title>
+
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial;
+    }
+
+    body {
+        background: #0f1923;
+        color: white;
+    }
+
+    /* WRAPPER */
+    #wrapper {
+        width: 960px;
+        margin: auto;
+        background: #1f2731;
+    }
+
+    /* HEADER */
+    #header {
+        background: #ff4655;
+        padding: 20px;
+    }
+
+    #header h1 {
+        float: left;
+    }
+
+    /* MENU */
+    #menu-utama {
+        list-style: none;
+        float: left;
+        margin-left: 20px;
+    }
+
+    #menu-utama li {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    #menu-utama a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* SEARCH */
+    #header form {
+        float: right;
+    }
+
+    /* SLIDER */
+    #slider img {
+        width: 100%;
+    }
+
+    /* ARTIKEL */
+    #daftar-artikel {
+        width: 640px;
+        float: left;
+        padding: 20px;
+    }
+
+    .artikel {
+        margin-bottom: 20px;
+        background: #2a3441;
+        padding: 10px;
+    }
+
+    .artikel img {
+        width: 100%;
+    }
+
+    .artikel a {
+        color: #ff4655;
+    }
+
+    /* SIDEBAR */
+    #sidebar {
+        width: 260px;
+        float: right;
+        padding: 20px;
+        background: #18212b;
+    }
+
+    /* FOOTER */
+    #footer {
+        clear: both;
+        background: #ff4655;
+        padding: 20px;
+        text-align: center;
+    }
+    </style>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- HEADER -->
+    <div id="header">
+        <h1>VALORANT ZONE</h1>
+
+        <ul id="menu-utama">
+            <li><a href="">Home</a></li>
+            <li><a href="">Agents</a></li>
+            <li><a href="">Maps</a></li>
+            <li><a href="">News</a></li>
+        </ul>
+
+        <form>
+            <input type="text" placeholder="Search...">
+        </form>
+    </div>
+
+    <!-- ARTIKEL -->
+    <div id="daftar-artikel">
+
+        <div class="artikel">
+            <img src="images/jett.jpg">
+            <h1>Agent Jett</h1>
+            <b>Duelist</b>
+            <p>Jett adalah agent dengan kecepatan tinggi dan kemampuan dash.</p>
+            <a href="">Read More</a>
+        </div>
+
+        <div class="artikel">
+            <img src="images/omen.jpg">
+            <h1>Agent Omen</h1>
+            <b>Controller</b>
+            <p>Omen menggunakan bayangan untuk mengontrol area map.</p>
+            <a href="">Read More</a>
+        </div>
+
+        <div class="artikel">
+            <img src="images/phoenix.jpg">
+            <h1>Agent Phoenix</h1>
+            <b>Duelist</b>
+            <p>Phoenix memiliki skill api dan bisa heal dirinya sendiri.</p>
+            <a href="">Read More</a>
+        </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar">
+        <h2>Tentang Valorant</h2>
+        <p>Valorant adalah game FPS tactical dari Riot Games.</p>
+
+        <h2>Kategori</h2>
+        <ul>
+            <li><a href="">Agents</a></li>
+            <li><a href="">Weapons</a></li>
+            <li><a href="">Maps</a></li>
+            <li><a href="">Tips & Tricks</a></li>
+        </ul>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+        <p>Valorant Fan Website © 2026</p>
+    </div>
+
+</div>
+
+<!-- JQUERY SLIDER -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("#slider img:gt(0)").hide();
+
+    setInterval(function(){
+        $('#slider img:first')
+        .fadeOut()
+        .next()
+        .fadeIn()
+        .end()
+        .appendTo('#slider');
+    }, 3000);
+});
+</script>
+
+</body>
+</HTML>
